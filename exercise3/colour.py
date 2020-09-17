@@ -43,7 +43,7 @@ class detect:
         #select area contains forebdg
         rect = (3,3,img.shape[1]-6,img.shape[0]-6)
         cv.grabCut(img,mask,rect,bgdModel,fgdModel,iteration_count,cv.GC_INIT_WITH_RECT)
-        cv.imshow("1", mask)
+      
 
         # mask ==2 means the bdg area and mask ==1 signify the fdg area you selected
         mask2 = np.where((mask==2)|(mask==0),0,1).astype('uint8')
